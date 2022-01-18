@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
-  before_action :set_restaurant, only: [:show, :edit, :update, :destroy]
+  before_action :set_task, only: [:show, :edit, :update, :destroy]
   def index
     @tasks = Task.all
   end
@@ -32,7 +32,7 @@ class TasksController < ApplicationController
 
   private
 
-  def set_restaurant
+  def set_task
     @task = Task.find(params[:id])
   end
 
